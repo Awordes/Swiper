@@ -36,4 +36,40 @@ internal class SimulatorService : ISimulatorService
     }
 
     public int[][] GetMatrix() => _matrix;
+
+    public void SwipeUp()
+    {
+        for (int j = 0; j < _size; j++)
+        {
+            int i = 0;
+            int mark = i + 1;
+
+            do
+            {
+                if (_matrix[mark][j] == 0)
+                {
+                    mark++;
+                    continue;
+                }
+
+                if (_matrix[i][j] == 0)
+                {
+                    _matrix[i][j] = _matrix[mark][j];
+                    _matrix[mark][j] = 0;
+                    mark++;
+                    continue;
+                }
+
+                if (_matrix[i][j] == _matrix[mark][j])
+                {
+                    _matrix[i][j] *= 2;
+                    _matrix[mark][j] = 0;
+                }
+                
+                i++;
+                mark = i + 1;
+            } 
+            while (i < _size && mark < _size);
+        }
+    }
 }
