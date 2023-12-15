@@ -11,4 +11,6 @@ public interface ISimulatorService
     void SwipeUp();
 
     void SwipeDown();
+
+    void SwipeLeft();
 }
