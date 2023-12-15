@@ -9,4 +9,6 @@ public interface ISimulatorService
     int[][] GetMatrix();
     
     void SwipeUp();
+
+    void SwipeDown();
 }
