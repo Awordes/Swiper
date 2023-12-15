@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swiper.Simulator", "Swiper.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swiper.Tests", "Swiper.Tests\Swiper.Tests.csproj", "{0CD4E7B3-6868-4224-9DA4-E22D3EA985B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swiper.Startup", "Swiper.Startup\Swiper.Startup.csproj", "{7658C896-90D5-42F9-A2B2-A03024499FE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{0CD4E7B3-6868-4224-9DA4-E22D3EA985B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CD4E7B3-6868-4224-9DA4-E22D3EA985B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CD4E7B3-6868-4224-9DA4-E22D3EA985B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7658C896-90D5-42F9-A2B2-A03024499FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7658C896-90D5-42F9-A2B2-A03024499FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7658C896-90D5-42F9-A2B2-A03024499FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7658C896-90D5-42F9-A2B2-A03024499FE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
