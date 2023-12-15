@@ -144,4 +144,40 @@ internal class SimulatorService : ISimulatorService
             while (i < _size && mark < _size);
         }
     }
+
+    public void SwipeRight()
+    {
+        for (int j = _size - 1; j > -1; j--)
+        {
+            int i = _size - 1;
+            int mark = i - 1;
+
+            do
+            {
+                if (_matrix[j][mark] == 0)
+                {
+                    mark--;
+                    continue;
+                }
+
+                if (_matrix[j][i] == 0)
+                {
+                    _matrix[j][i] = _matrix[j][mark];
+                    _matrix[j][mark] = 0;
+                    mark--;
+                    continue;
+                }
+
+                if (_matrix[j][i] == _matrix[j][mark])
+                {
+                    _matrix[j][i] *= 2;
+                    _matrix[j][mark] = 0;
+                }
+                
+                i--;
+                mark = i - 1;
+            } 
+            while (i > -1 && mark > -1);
+        }
+    }
 }

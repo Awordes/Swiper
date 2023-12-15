@@ -21,7 +21,7 @@ public class SwiperSimulatorTests
         input[2] = [4, 2, 2, 4];
         input[3] = [2, 4, 2, 4];
 
-        var expect = new int[size][];        
+        var expect = new int[size][];
         expect[0] = [8, 4, 2, 4];
         expect[1] = [2, 4, 4, 8];
         expect[2] = [0, 0, 4, 0];
@@ -48,7 +48,7 @@ public class SwiperSimulatorTests
         input[2] = [4, 2, 2, 4];
         input[3] = [2, 4, 2, 4];
 
-        var expect = new int[size][];        
+        var expect = new int[size][];
         expect[0] = [0, 0, 0, 0];
         expect[1] = [0, 0, 2, 0];
         expect[2] = [8, 4, 4, 4];
@@ -75,7 +75,7 @@ public class SwiperSimulatorTests
         input[2] = [4, 2, 2, 4];
         input[3] = [2, 4, 2, 4];
 
-        var expect = new int[size][];        
+        var expect = new int[size][];
         expect[0] = [4, 4, 0, 0];
         expect[1] = [2, 4, 2, 0];
         expect[2] = [4, 4, 4, 0];
@@ -83,6 +83,33 @@ public class SwiperSimulatorTests
 
         simulatorService.StartSimulation(size, input);
         simulatorService.SwipeLeft();
+        var result = simulatorService.GetMatrix();
+        
+        Assert.Equal(expect, result);
+    }
+
+    [Fact]
+    public void SwipeRight_ShouldSwipeRight()
+    {
+        var serviceProvider = BuildServiceProvider();
+
+        var simulatorService = serviceProvider.GetRequiredService<ISimulatorService>();
+
+        var size = 4;
+        var input = new int[size][];
+        input[0] = [4, 0, 2, 2];
+        input[1] = [0, 2, 4, 2];
+        input[2] = [4, 2, 2, 4];
+        input[3] = [2, 4, 2, 4];
+
+        var expect = new int[size][];
+        expect[0] = [0, 0, 4, 4];
+        expect[1] = [0, 2, 4, 2];
+        expect[2] = [0, 4, 4, 4];
+        expect[3] = [2, 4, 2, 4];
+
+        simulatorService.StartSimulation(size, input);
+        simulatorService.SwipeRight();
         var result = simulatorService.GetMatrix();
         
         Assert.Equal(expect, result);
