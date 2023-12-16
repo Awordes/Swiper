@@ -36,6 +36,14 @@ internal class SimulatorService : ISimulatorService
     }
 
     public int[][] GetMatrix() => _matrix;
+    
+    public void AddValueInMatrix(int value, int valueX, int valueY)
+    {
+        if (valueX >= _size || valueY >= _size)
+            throw new Exception("Wrong coordinates");
+        
+        _matrix[valueY][valueX] = value;
+    }
 
     public void SwipeUp()
     {

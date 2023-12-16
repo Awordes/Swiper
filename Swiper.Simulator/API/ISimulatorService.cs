@@ -7,6 +7,8 @@ public interface ISimulatorService
     void StartSimulation(int size, int[][] field);
 
     int[][] GetMatrix();
+
+    void AddValueInMatrix(int value, int valueX, int valueY);
     
     void SwipeUp();
 
